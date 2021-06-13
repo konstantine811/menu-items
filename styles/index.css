@@ -1,0 +1,104 @@
+body,
+html {
+  margin: 0;
+  background-color: blueviolet;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-link {
+  color: white;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-link {
+  padding: 20px;
+  border-radius: 3px;
+  display: flex;
+  position: relative;
+}
+
+.menu-item:hover .menu-link {
+  background-color: white;
+  color: blueviolet;
+}
+
+.menu-item:hover .float-menu {
+  display: block;
+}
+
+.menu-item:hover .menu-link:before {
+  transform: rotate(225deg);
+}
+
+.menu-link::before {
+  content: "";
+  width: 5px;
+  height: 6px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  margin-right: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 24px;
+  right: 6px;
+  transition: all 0.3s ease;
+}
+
+.menu-link::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 18px;
+}
+
+.float-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: none;
+  width: max-content;
+  left: 30px;
+  border-radius: 2px;
+}
+
+.float-menu-link {
+  padding: 20px 40px;
+  display: inline-block;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.float-menu-link:hover {
+  background-color: transparent;
+  color: white;
+}
